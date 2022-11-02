@@ -1,25 +1,20 @@
-puts('Enter first number')
-num1 = gets.chomp.to_f
-puts('Enter operator')
-op = gets.chomp
-puts('Enter second number')
-num2 = gets.chomp.to_f
-
-def solution(num1, num2, op)
-  sol = 0
-  if op == '+'
-    sol = num1 + num2
-  elsif op == '-'
-   sol= num1 - num2
-
-  elsif op == '*'
-   sol = num1 * num2
-  elsif op == '/'
-    sol = num1 / num2
-  else
-    sol = 'Invalid operation'
+def get_day(day)
+  case day
+  when 'mon'
+    'Monday'
+  when 'tue'
+    'Tuesday'
+  when 'wed'
+    'Wednesday'
+  when 'thu'
+    'Thursday'
+  when 'fri'
+    'Friday'
+  when 'sat'
+    'Saturday'
+  when 'sun'
+    'Sunday'
   end
-  return sol;
 end
 
-puts(solution(num1, num2, op))
+puts(get_day_name('mon'))
