@@ -1,20 +1,26 @@
-secret_word = 'giraffe'
-guess = ''
-guess_count = 0
-guess_limit = 3
-out_of_guesses = false
-while guess != secret_word && !out_of_guesses
-  if guess_count < guess_limit
-    puts 'Enter your guess'
-    guess = gets.chomp
-    guess_count += 1
-  else
-    out_of_guesses = true
-  end
-
+shows = %w[Teams Animals]
+puts 'Welcome to the guessing game!'
+puts 'What would you like to guess?'
+selected = ''
+for value in shows do
+  puts((shows.index(value) + 1).to_s + value)
 end
-if out_of_guesses
-  puts 'You Lost'
-else
-  puts 'You Won'
+selected = gets.chomp
+choosed = Array[]
+case selected.to_i
+when 1
+  choosed = ['Arsenal', 'Chelsea', 'Liverpool', 'Manchester United', 'Manchester City', 'Tottenham Hotspur',
+             'Everton', 'West Ham United', 'Leicester City', 'Aston Villa', 'Newcastle United', 'Crystal Palace', 'Southampton', 'Wolverhampton Wanderers', 'Burnley', 'Brighton & Hove Albion', 'Sheffield United', 'Norwich City', 'Watford', 'Bournemouth']
+when 2
+  choosed = Array['Lion', 'Tiger', 'Elephat', 'Person', 'Chicken', 'Hen', 'Pogba']
 end
+choice = rand(choosed.length)
+placeHolder = ''
+i = 0
+while i < choosed[choice].length
+  placeHolder+= "_ "
+  i += 1
+end
+puts placeHolder;  
+puts "Enter your choicie"
+ch = gets.chomp()
