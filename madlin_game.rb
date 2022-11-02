@@ -1,4 +1,4 @@
-def sayHi
-    puts "Hello World"
+def sayHi(name)
+    puts "Hello " + name;
 end;
-sayHi()
+sayHi("giovann")
