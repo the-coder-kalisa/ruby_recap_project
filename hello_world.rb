@@ -1,3 +1,2 @@
-name = "klisa"
-isMale = false;
-puts isMale;
+phrase = "kalisa";
+puts phrase[0]
