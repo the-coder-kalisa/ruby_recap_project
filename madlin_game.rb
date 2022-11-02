@@ -1,10 +1,25 @@
-def max(num1, num2, num3)
-  return num1 if num1 >= num2 && num1 >= num3
-      
-   num2 >= num1 && num2 >= num3
-      num2
+puts('Enter first number')
+num1 = gets.chomp.to_f
+puts('Enter operator')
+op = gets.chomp
+puts('Enter second number')
+num2 = gets.chomp.to_f
+
+def solution(num1, num2, op)
+  sol = 0
+  if op == '+'
+    sol = num1 + num2
+  elsif op == '-'
+   sol= num1 - num2
+
+  elsif op == '*'
+   sol = num1 * num2
+  elsif op == '/'
+    sol = num1 / num2
   else
-      num3
-  
+    sol = 'Invalid operation'
+  end
+  return sol;
 end
-puts(max(100, 40, 50))
+
+puts(solution(num1, num2, op))
