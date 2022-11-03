@@ -1,4 +1,4 @@
-shows = %w[Teams Animals]
+shows = Array['Teams', 'Animals']
 puts '============WELCOME================'
 puts 'What would you like to guess?'
 selected = ''
@@ -9,7 +9,7 @@ selected = gets.chomp
 choosed = Array[]
 case selected.to_i
 when 1
-  choosed = ['Arsenal', 'Chelsea', 'Liverpool', 'Manchester United', 'Manchester City', 'Tottenham Hotspur',
+  choosed = Array['Arsenal', 'Chelsea', 'Liverpool', 'Manchester United', 'Manchester City', 'Tottenham Hotspur',
              'Everton', 'West Ham United', 'Leicester City', 'Aston Villa', 'Newcastle United', 'Crystal Palace', 'Southampton', 'Wolverhampton Wanderers', 'Burnley', 'Brighton & Hove Albion', 'Sheffield United', 'Norwich City', 'Watford', 'Bournemouth']
 when 2
   choosed = Array['Lion', 'Tiger', 'Elephant', 'Human Being', 'Chicken', 'Hen', 'Horse', 'Leopard', 'Ostrish']
