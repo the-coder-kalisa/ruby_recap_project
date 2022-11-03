@@ -10,7 +10,7 @@ choosed = Array[]
 case selected.to_i
 when 1
   choosed = Array['Arsenal', 'Chelsea', 'Liverpool', 'Manchester United', 'Manchester City', 'Tottenham Hotspur',
-             'Everton', 'West Ham United', 'Leicester City', 'Aston Villa', 'Newcastle United', 'Crystal Palace', 'Southampton', 'Wolverhampton Wanderers', 'Burnley', 'Brighton & Hove Albion', 'Sheffield United', 'Norwich City', 'Watford', 'Bournemouth']
+                  'Everton', 'West Ham United', 'Leicester City', 'Aston Villa', 'Newcastle United', 'Crystal Palace', 'Southampton', 'Wolverhampton Wanderers', 'Burnley', 'Brighton & Hove Albion', 'Sheffield United', 'Norwich City', 'Watford', 'Bournemouth']
 when 2
   choosed = Array['Lion', 'Tiger', 'Elephant', 'Human Being', 'Chicken', 'Hen', 'Horse', 'Leopard', 'Ostrish']
 else
@@ -28,7 +28,7 @@ guess_count = 0
 guess_limit = 3
 out_of_choices = false
 puts placeHolder
-puts "You have got " + guess_limit.to_s +  " chances"
+puts 'You have got ' + guess_limit.to_s + ' chances'
 while guess != choosed[choice] && !out_of_choices
   if guess_count < guess_limit
     puts 'Enter guess: '
