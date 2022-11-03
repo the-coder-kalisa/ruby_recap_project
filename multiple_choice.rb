@@ -24,6 +24,6 @@ def run_test(questions)
     answer = gets.chomp
     score += 1 if answer == question.answer
   end
-  puts "you have got " + score.to_s + "/" + questions.length.to_s
+  puts 'you have got ' + score.to_s + '/' + questions.length.to_s
 end
 run_test(questions)
