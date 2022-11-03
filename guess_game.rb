@@ -28,6 +28,7 @@ guess_count = 0
 guess_limit = 3
 out_of_choices = false
 puts placeHolder
+puts "You have got " + guess_limit.to_s +  " chances"
 while guess != choosed[choice] && !out_of_choices
   if guess_count < guess_limit
     puts 'Enter guess: '
