@@ -1,4 +1,4 @@
-shows = Array['Teams', 'Animals']
+shows = Array['Teams', 'Animals', 'Books', 'Students', 'Players']
 puts '============WELCOME================'
 puts 'What would you like to guess?'
 selected = ''
@@ -13,6 +13,12 @@ when 1
                   'Everton', 'West Ham United', 'Leicester City', 'Aston Villa', 'Newcastle United', 'Crystal Palace', 'Southampton', 'Wolverhampton Wanderers', 'Burnley', 'Brighton & Hove Albion', 'Sheffield United', 'Norwich City', 'Watford', 'Bournemouth']
 when 2
   choosed = Array['Lion', 'Tiger', 'Elephant', 'Human Being', 'Chicken', 'Hen', 'Horse', 'Leopard', 'Ostrish']
+when 3
+  choosed = Array['Davinch', 'Steven in forest', 'Hiring the mist', 'Inside']
+when 4
+  choosed = Array['Emmy', 'Charles', 'Gaks', 'Pogba', 'Bellamy']
+when 5
+  choosed = Array['Christiano', 'Messi', '']
 else
   exit
 end
@@ -31,7 +37,11 @@ puts placeHolder
 puts 'You have got ' + guess_limit.to_s + ' chances'
 while guess != choosed[choice] && !out_of_choices
   if guess_count < guess_limit
-    puts 'Enter guess: '
+    if guess_count >= 1
+      puts 'Try again Enter guess: '
+    else
+      puts 'Enter guess'
+    end
     guess = gets.chomp
     guess_count += 1
   else
